@@ -8,8 +8,9 @@ echo "install golang..."
 sudo apt-get install golang-go -y
 sudo apt-get install mercurial -y
 
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=/home/vagrant/dev
+mkdir /home/ubuntu/dev
+echo 'export PATH=$PATH:/usr/local/go/bin' >> .bashrc
+echo 'export GOPATH=/home/ubuntu/dev' >> .bashrc
 
 go get golang.org/x/tools/cmd/godoc
 go get golang.org/x/tools/cmd/vet
